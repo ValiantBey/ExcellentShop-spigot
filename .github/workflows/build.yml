@@ -26,8 +26,8 @@ jobs:
           java-version: '25'
           cache: maven
 
-      - name: Build
-        run: mvn -B clean package --no-transfer-progress
+      - name: Build ExcellentShop
+        run: mvn -B clean package -pl Core -am --no-transfer-progress
 
       - name: Upload ExcellentShop
         uses: actions/upload-artifact@v4
